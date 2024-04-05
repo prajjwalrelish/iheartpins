@@ -1,0 +1,31 @@
+{% extends 'seller/base.html' %}
+{% load static %}
+{% block seller_head %}
+<link rel="stylesheet" type="text/css" href="{% static 'seller/css/pinview.css' %}">
+<link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+{% endblock seller_head %}
+{% block seller_body %}
+<div class="container-fluid">
+    <div class="card">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="{{pin.image1.url}}" class="image-responsive">
+            </div>
+            <div class="col-md-7">
+                   <h1>{{pin.pin_name}}</h1>
+                    <p class="description">
+                   {{pin.desc}}
+                  </p>
+                  
+                    
+                    <div class="row">
+                     <div class="col-md-12 bottom-rule">
+                      <h2 class="pin-price"><i class="fa fa-inr" aria-hidden="true"></i> {{pin.price}}</h2>
+                     </div>
+                    </div><!-- end row -->
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock seller_body %}
